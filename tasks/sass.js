@@ -32,16 +32,6 @@ module.exports = function (grunt) {
     var options = this.options();
     var passedArgs;
 
-    if (options.bundleExec) {
-      checkBinary('bundle',
-        'bundleExec options set but no Bundler executable found in your PATH.'
-      );
-    } else {
-      checkBinary('sass',
-        'You need to have Ruby and Sass installed and in your PATH for this task to work.'
-      );
-    }
-
     if (options.check) {
       options.concurrencyCount = concurrencyCount;
       checkFilesSyntax(this.filesSrc, options, cb);
